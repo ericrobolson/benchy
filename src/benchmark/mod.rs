@@ -18,8 +18,6 @@ pub(crate) fn timer(name: &'static str) -> Timer {
 
 /// Saves the contents to the given file path.
 pub(crate) fn save<'a>(file_path: &'a str) {
-    println!("contents: {:?}", STATISTICS.lock().unwrap().contents());
-
     use std::fs::File;
     use std::io::prelude::*;
 
