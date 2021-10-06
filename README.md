@@ -8,7 +8,7 @@ How to use:
 1) Enable the `benchmark` feature.
 ```
 [dependencies]
-bench = { .. , features=["benchmark"]}
+benchy = { .. , features=["benchmark"]}
 ```
 2) Add timers within hot paths, at the start of the block.
 3) At some point in your app, call `Benchy::save(file_path)` to write the contents to disk. 
