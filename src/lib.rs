@@ -1,3 +1,5 @@
+#![cfg_attr(not(feature = "benchmark"), no_std)]
+
 #[cfg(feature = "benchmark")]
 #[macro_use]
 extern crate lazy_static;
@@ -38,7 +40,7 @@ impl Benchy {
 
     /// Saves the benchmark results to the given file.
     #[allow(unused_variables)]
-    pub fn save(file_path: &'static str) {
+    pub fn save<'a>(file_path: &'a str) {
         #[cfg(feature = "benchmark")]
         {
             benchmark::save(file_path);
